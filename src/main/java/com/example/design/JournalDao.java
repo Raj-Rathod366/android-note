@@ -12,4 +12,8 @@ public interface JournalDao {
 
     @Query("SELECT * FROM journal_table ORDER BY id DESC")
     List<Journal> getAllJournals();
+
+    // allow deleting by ID
+    @Query("DELETE FROM journal_table WHERE id = :journalId")
+    void deleteById(int journalId);
 }

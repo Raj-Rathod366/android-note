@@ -13,6 +13,7 @@
         android:theme="@style/Theme.NotesApp">
 
         <activity android:name=".AddJournalActivity" />
+        <activity android:name=".JournalDetailActivity" />
 
         <activity
             android:name=".MainActivity"

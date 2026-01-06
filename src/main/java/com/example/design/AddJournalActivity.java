@@ -33,7 +33,8 @@ public class AddJournalActivity extends AppCompatActivity {
             String mood = (selectedMood != null) ? selectedMood.getText().toString() : "😊";
 
             // Save to Database
-            Journal newEntry = new Journal(title, mood, content, "Jan 06, 2026");
+            String currentDate = new java.text.SimpleDateFormat("MMM dd, yyyy", java.util.Locale.getDefault()).format(new java.util.Date());
+            Journal newEntry = new Journal(title, mood, content, currentDate);
             AppDatabase.getInstance(this).journalDao().insert(newEntry);
 
             // Close screen and go back
