@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Entry"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="SAVE"
+            android:textColor="#BB86FC"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Journal Title"
+        android:textColorHint="#555555"
+        android:textColor="#FFFFFF"
+        android:background="@android:color/transparent"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:inputType="textCapSentences"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How are you feeling?"
+        android:textColor="#888888"
+        android:textSize="14sp"
+        android:layout_marginBottom="12dp"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginBottom="32dp">
+
+        <RadioGroup
+            android:id="@+id/moodGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton android:id="@+id/moodHappy" android:layout_width="60dp" android:layout_height="60dp" android:text="😊" android:button="@null" android:background="@drawable/mood_selector" android:gravity="center" android:textSize="24sp" android:layout_marginEnd="12dp"/>
+            <RadioButton android:id="@+id/moodNeutral" android:layout_width="60dp" android:layout_height="60dp" android:text="😐" android:button="@null" android:background="@drawable/mood_selector" android:gravity="center" android:textSize="24sp" android:layout_marginEnd="12dp"/>
+            <RadioButton android:id="@+id/moodSad" android:layout_width="60dp" android:layout_height="60dp" android:text="😢" android:button="@null" android:background="@drawable/mood_selector" android:gravity="center" android:textSize="24sp" android:layout_marginEnd="12dp"/>
+            <RadioButton android:id="@+id/moodCool" android:layout_width="60dp" android:layout_height="60dp" android:text="😎" android:button="@null" android:background="@drawable/mood_selector" android:gravity="center" android:textSize="24sp" android:layout_marginEnd="12dp"/>
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <EditText
+        android:id="@+id/editContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:hint="Write your thoughts here..."
+        android:textColorHint="#444444"
+        android:textColor="#DDDDDD"
+        android:background="@android:color/transparent"
+        android:gravity="top"
+        android:textSize="18sp"
+        android:inputType="textMultiLine"
+        />
+
+</LinearLayout>
