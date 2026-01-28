@@ -4,23 +4,47 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212"> <com.google.android.material.appbar.AppBarLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@android:color/transparent"
-    app:elevation="0dp">
+    android:background="#121212">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/mu_logo"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:contentDescription="Background Logo" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="My Journal"
-        android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        android:fontFamily="sans-serif-black"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="16dp"/>
-</com.google.android.material.appbar.AppBarLayout>
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Journal"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/editSearch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/rounded_bg_placeholder"
+            android:hint="Search your thoughts..."
+            android:paddingStart="20dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#555555"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:drawablePadding="10dp"
+            android:drawableTint="#555555"/>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
