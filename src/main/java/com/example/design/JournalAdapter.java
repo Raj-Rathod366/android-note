@@ -10,7 +10,7 @@ import java.util.List;
 
 public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalViewHolder> {
 
-    private final List<Journal> journalList;
+    private List<Journal> journalList;
 
     public JournalAdapter(List<Journal> journalList) {
         this.journalList = journalList;
@@ -31,7 +31,7 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalV
         holder.textTitle.setText(currentJournal.title);
         holder.textDate.setText(currentJournal.date);
         holder.textMoodIcon.setText(currentJournal.mood);
-
+ 
         // Add this Click Listener:
         holder.itemView.setOnClickListener(v -> {
             android.content.Intent intent = new android.content.Intent(v.getContext(), JournalDetailActivity.class);
@@ -63,6 +63,5 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalV
             textMoodIcon = itemView.findViewById(R.id.textMoodIcon);
         }
     }
-
 
 }
